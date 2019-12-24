@@ -159,7 +159,7 @@ class Register(models.Model):
     patient = models.ForeignKey('Patient', on_delete=models.PROTECT, verbose_name='Пациент')
 
     def __str__(self):
-        return str(self.reception_line) + str(self.patient)
+        return str(self.reception_line) + ' ' + str(self.patient)
 
     class Meta:
         verbose_name = 'Запись на прием'
