@@ -25,7 +25,7 @@ SECRET_KEY = 'z3l2f#%ir$tqsl=d$!o!i=cwgb(iq9=e*-+_y%-94%=8fs(by5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['185.27.194.131']
 
 
 # Application definition
@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'hospital.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'hospital',
-        'USER' : 'andrey',
-        'PASSWORD' : 'root',
-        'HOST' : '127.0.0.1',
+        'NAME': 'rkib',
+        'USER' : 'adisen',
+        'PASSWORD' : 'adisen',
+        'HOST' : '185.27.194.131',
         'PORT' : '5432',
     }
 }
