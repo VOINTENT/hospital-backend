@@ -6,14 +6,15 @@ from .models import Register, RegisterOutPlan
 
 
 class UserAdmin(admin.ModelAdmin):
-    list_display = ('login', 'password', 'email', 'phone_number')
-    list_display_links = ('login',)
-    search_fields = ('login',)
+    list_display = ('password', 'email', 'phone_number')
+    list_display_links = ('email', 'phone_number')
+    search_fields = ('email', 'phone_number')
 
 # class PatientAdmin(admin.ModelAdmin):
 #     list_display = ('user', 'name', 'surname', 'patronymic', 'birth_date', 'snils', 'policy')
 #     list_display_links = ('login',)
 #     search_fields = ('login',)
+
 
 admin.site.register(User, UserAdmin)
 admin.site.register(Patient)

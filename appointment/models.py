@@ -1,8 +1,8 @@
 from django.db import models
 
+
 class User(models.Model):
-    login = models.CharField(max_length=50, unique=True, verbose_name='Логин')
-    password = models.CharField(max_length=100, verbose_name='Пароль')
+    password = models.CharField(max_length=200, verbose_name='Пароль')
     email = models.EmailField(max_length=50, unique=True, verbose_name='Email')
     phone_number = models.CharField(max_length=15, unique=True, verbose_name='Номер телефона')
     date_creation = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
@@ -15,7 +15,7 @@ class User(models.Model):
     user_type = models.CharField(max_length=7, choices=choices, default='patient')
 
     def __str__(self):
-        return self.login
+        return self.email
 
     class Meta:
         verbose_name = 'Пользователь'
@@ -24,12 +24,12 @@ class User(models.Model):
 
 class Patient(models.Model):
     user = models.OneToOneField('User', on_delete=models.CASCADE, verbose_name='Пользователь')
-    name = models.CharField(max_length=50, verbose_name='Имя')
-    surname = models.CharField(max_length=50, verbose_name='Фамилия')
-    patronymic = models.CharField(max_length=50, blank=True, null=True, verbose_name='Отчество')
-    birth_date = models.DateField(verbose_name='Дата рождения')
-    snils = models.CharField(max_length=14, unique=True, verbose_name='СНИЛС')
-    policy = models.CharField(max_length=16, unique=True, verbose_name='Номер страхового полиса')
+    first_name = models.CharField(max_length=50, verbose_name='Имя')
+    last_name = models.CharField(max_length=50, verbose_name='Фамилия')
+    middle_name = models.CharField(max_length=50, blank=True, null=True, verbose_name='Отчество')
+    birth_date = models.DateField(verbose_name='Дата рождения', null=True)
+    snils = models.CharField(max_length=14, unique=True, verbose_name='СНИЛС', null=True)
+    policy = models.CharField(max_length=16, unique=True, verbose_name='Номер страхового полиса', null=True)
 
     def __str__(self):
         return self.surname + ' ' + self.name
@@ -153,6 +153,7 @@ class ReceptionLine(models.Model):
     class Meta:
         verbose_name = 'Строка приема'
         verbose_name_plural = 'Строки приема'
+
 
 class Register(models.Model):
     reception_line = models.ForeignKey('ReceptionLine', on_delete=models.PROTECT, verbose_name='Строка приема')

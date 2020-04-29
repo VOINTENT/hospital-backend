@@ -2,11 +2,11 @@ import json
 
 from .models import *
 
+
 def encode(object):
     if isinstance(object, User):
         return {
             'id': object.id,
-            'login': object.login,
             'password': object.password,
             'email': object.email,
             'phone_number': object.phone_number,
@@ -18,10 +18,10 @@ def encode(object):
         return {
             'id': object.id,
             'user': encode(object.user),
-            'name': object.name,
-            'surname': object.surname,
-            'patronymic': object.patronymic,
-            'birth_date': str(object.birth_date),
+            'first_name': object.first_name,
+            'last_name': object.last_name,
+            'middle_name': object.middle_name,
+            'birth_date': object.birth_date,
             'snils': object.snils,
             'policy': object.policy,
         }
