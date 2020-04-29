@@ -5,6 +5,11 @@ import json
 from .models import *
 from .serializers import encode
 
+
+def test(request):
+    return HttpResponse('Appointment')
+
+
 def reception_lines(request):
     if request.method == 'GET':
         date = request.GET.get('date', '')

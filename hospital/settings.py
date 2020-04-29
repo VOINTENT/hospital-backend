@@ -25,9 +25,9 @@ SECRET_KEY = 'z3l2f#%ir$tqsl=d$!o!i=cwgb(iq9=e*-+_y%-94%=8fs(by5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['185.27.194.131']
+ALLOWED_HOSTS = ['185.27.194.131', 'localhost']
 
-APPEND_SLASH = False
+# APPEND_SLASH = False
 
 
 # Application definition
@@ -46,7 +46,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -80,10 +80,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'rkib',
-        'USER' : 'adisen',
-        'PASSWORD' : 'adisen',
-        'HOST' : '185.27.194.131',
-        'PORT' : '5432',
+        'USER': 'adisen',
+        'PASSWORD': 'adisen',
+        'HOST': '185.27.194.131',
+        'PORT': '5432',
     }
 }
 
