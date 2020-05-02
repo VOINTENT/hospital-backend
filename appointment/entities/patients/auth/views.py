@@ -105,17 +105,12 @@ class SignUp(View):
             policy=None
         )
 
-        resp['status'] = 0
-        resp['msg'] = 'Ok'
-        resp['data'] = {'id': user.id}
-        return HttpResponse(json.dumps(resp), content_type='application/json', status=201)
-
-
-# @csrf_exempt
-# def signup(request):
-#     data = request.POST
-#     print(data)
-#     return HttpResponse('Basic auth')
+        response = HttpResponse(
+            json.dumps(resp, default=encode),
+            content_type='application/json',
+            status=201)
+        response.set_cookie('token', get_token(user))
+        return response
 
 
 class SignInBasic(View):
