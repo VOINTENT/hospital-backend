@@ -43,4 +43,4 @@ class PatientDetail(View):
         resp['status'] = 0
         resp['msg'] = 'ok'
         resp['data'] = resp_data
-        return HttpResponse(json.dumps(resp_data), content_type='application/json', status=200)
+        return HttpResponse(json.dumps(resp), content_type='application/json', status=200)
