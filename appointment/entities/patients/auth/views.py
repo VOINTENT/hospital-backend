@@ -105,6 +105,23 @@ class SignUp(View):
             policy=None
         )
 
+        resp_data = {
+            'user_id': patient.user.id,
+            'patient_id': patient.id,
+            'first_name': patient.first_name,
+            'last_name': patient.last_name,
+            'middle_name': patient.middle_name,
+            'birth_date': patient.birth_date,
+            'snils': patient.snils,
+            'policy': patient.policy,
+            'email': patient.user.email,
+            'phone_number': patient.user.phone_number
+        }
+
+        resp['status'] = 0
+        resp['msg'] = 'ok'
+        resp['data'] = resp_data
+
         response = HttpResponse(
             json.dumps(resp, default=encode),
             content_type='application/json',
