@@ -113,7 +113,7 @@ class SignUp(View):
         return response
 
 
-class SignInBasic(View):
+class LoginBasic(View):
 
     def post(self, request, *args, **kwargs):
         resp = get_response_template()
@@ -162,4 +162,22 @@ class SignInBasic(View):
             content_type='application/json',
             status=200)
         response.set_cookie('token', get_token(user))
+        return response
+
+
+class Logout(View):
+
+    def delete(self, request, *args, **kwargs):
+        resp = get_response_template()
+
+        token = request.COOKIES.get('token')
+        if not token:
+            resp['status'] = mistakes.NOT_AUTHORIZED[0]
+            resp['msg'] = mistakes.NOT_AUTHORIZED[1]
+            return HttpResponse(json.dumps(resp), content_type='application/json', status=401)
+
+        resp['status'] = 0
+        resp['msg'] = 'ok'
+        response = HttpResponse(json.dumps(resp), content_type='application/json', status=401)
+        response.delete_cookie('token')
         return response
