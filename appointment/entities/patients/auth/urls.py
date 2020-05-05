@@ -23,6 +23,7 @@ urlpatterns = [
     path('', test),
     path('login/basic', LoginBasic.as_view()),
     path('signup', SignUp.as_view()),
+    path('logout', Logout.as_view())
     # path('doctors', doctors),
     # path('services', services),
     # path('reception-lines', reception_lines),
