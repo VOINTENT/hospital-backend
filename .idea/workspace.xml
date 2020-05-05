@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="164ec176-beda-4690-a910-ab1ae196063a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appointment/entities/patients/auth/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/appointment/entities/patients/auth/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appointment/entities/patients/auth/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/appointment/entities/patients/auth/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/appointment/entities/patients/auth/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="183" selection-start-line="183" selection-end-line="183" />
+            <state relative-caret-position="522">
+              <caret line="182" column="23" lean-forward="true" selection-start-line="182" selection-start-column="23" selection-end-line="182" selection-end-column="23" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
                 <element signature="e#859#3764#0" />
@@ -40,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appointment/entities/patients/auth/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            <state relative-caret-position="210">
+              <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -226,12 +224,12 @@
       <workItem from="1588500449561" duration="3361000" />
       <workItem from="1588511057343" duration="434000" />
       <workItem from="1588622415844" duration="2251000" />
-      <workItem from="1588659989542" duration="1064000" />
+      <workItem from="1588659989542" duration="1815000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57585000" />
+    <option name="totallyTimeSpent" value="58336000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -545,8 +543,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/appointment/entities/patients/auth/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="210">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
@@ -562,8 +560,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/appointment/entities/patients/auth/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="183" selection-start-line="183" selection-end-line="183" />
+        <state relative-caret-position="522">
+          <caret line="182" column="23" lean-forward="true" selection-start-line="182" selection-start-column="23" selection-end-line="182" selection-end-column="23" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
             <element signature="e#859#3764#0" />

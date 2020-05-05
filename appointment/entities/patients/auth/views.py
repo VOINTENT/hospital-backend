@@ -178,6 +178,6 @@ class Logout(View):
 
         resp['status'] = 0
         resp['msg'] = 'ok'
-        response = HttpResponse(json.dumps(resp), content_type='application/json', status=401)
+        response = HttpResponse(json.dumps(resp), content_type='application/json', status=200)
         response.delete_cookie('token')
         return response
