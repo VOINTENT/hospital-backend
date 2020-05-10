@@ -198,3 +198,13 @@ class Logout(View):
         response = HttpResponse(json.dumps(resp), content_type='application/json', status=200)
         response.delete_cookie('token')
         return response
+
+
+class RestorePassword(View):
+
+    def post(self, request, *args, **kwargs):
+        resp = get_response_template()
+
+        resp['status'] = 0
+        resp['msg'] = 'ok'
+        return HttpResponse(json.dumps(resp), content_type='application/json', status=200)
